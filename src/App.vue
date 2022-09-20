@@ -9,7 +9,7 @@
 
 <script>
 // TODO: convert to Composition API
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'App',
   // computed: {
@@ -18,8 +18,10 @@ export default {
   //   }
   // },
   computed: mapGetters(['allPosts']),
+  methods: mapActions(['fetchPosts']),
   async mounted() {
-    this.$store.dispatch('fetchPosts')
+    // this.$store.dispatch('fetchPosts')
+    this.fetchPosts()
   }
 }
 </script>
