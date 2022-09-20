@@ -21,8 +21,8 @@ export default {
     allPosts(state) {
       return state.posts
     },
-    postsCount(state) {
-      return state.posts.length
+    postsCount(state, getters) {
+      return getters.validPosts.length
     },
     validPosts(state) {
       return state.posts.filter(post => post.title && post.body)

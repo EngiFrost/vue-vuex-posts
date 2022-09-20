@@ -26,3 +26,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 - To call a mutation use `context.commit('mutationName', data)`!
 - To call store action in component use `this.$store.dispatch('actionName')`!
 - To avoid an error do `app.mount('#app')` after all modules are connected!
+- To reach some getter from the other use `getters: {name(state, getters)}`!!!
