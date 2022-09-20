@@ -27,3 +27,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 - To call store action in component use `this.$store.dispatch('actionName')`!
 - To avoid an error do `app.mount('#app')` after all modules are connected!
 - To reach some getter from the other use `getters: {name(state, getters)}`!!!
+- To improve workflow use [Vue plugin for Chrome](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)!
