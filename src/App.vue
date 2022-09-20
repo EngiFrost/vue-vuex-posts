@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="post" v-for="post in posts" :key="post.id">
+    <div class="post" v-for="post in allPosts" :key="post.id">
       <h2>{{post.title}}</h2>
       <p>{{post.body}}</p>
     </div>
@@ -9,17 +9,17 @@
 
 <script>
 // TODO: convert to Composition API
+import { mapGetters } from 'vuex'
 export default {
   name: 'App',
-  computed: {
-    getAllPosts() {
-      return this.$store.getters.getAllPosts
-    }
-  },
+  // computed: {
+  //   allPosts() {
+  //     return this.$store.getters.allPosts
+  //   }
+  // },
+  computed: mapGetters(['allPosts']),
   async mounted() {
-    const response = await fetch('https://jsonplaceholder.typicode.com/users/1/posts?_limit=3')
-    const posts = await response.json()
-    this.posts = posts
+    this.$store.dispatch('fetchPosts')
   }
 }
 </script>

@@ -1,9 +1,10 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import { createStore } from 'vuex'
 import post from './modules/post'
 
-Vue.use(Vuex) // registered VueX module
+// Vue.use(Vuex) NOTE: deprecated and leads to error
 
-export default new Vuex.Store({ // FIXME: use contemporary syntax!
+const store = createStore({ // FIXME: use contemporary syntax!
   modules: { post },
 })
+
+export default store
