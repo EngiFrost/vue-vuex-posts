@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-    <div class="post" v-for="post in posts" :key="post.id">{{post.title}}</div>
+    <div class="post" v-for="post in posts" :key="post.id">
+      <h2>{{post.title}}</h2>
+      <p>{{post.body}}</p>
+    </div>
   </div>
 </template>
 
@@ -28,13 +31,14 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin: 60px auto;
+  width: 400px;
 }
 
 .post {
   padding: 20px;
   border: 1px solid black;
   border-radius: 5px;
-  margin: 10px auto;
+  margin-bottom: 20px;
 }
 </style>
