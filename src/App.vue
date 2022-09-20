@@ -21,7 +21,7 @@ export default {
   methods: mapActions(['fetchPosts']),
   async mounted() {
     // this.$store.dispatch('fetchPosts')
-    this.fetchPosts()
+    this.fetchPosts(5)
   }
 }
 </script>
