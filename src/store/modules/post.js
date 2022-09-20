@@ -23,6 +23,9 @@ export default {
     },
     postsCount(state) {
       return state.posts.length
+    },
+    validPosts(state) {
+      return state.posts.filter(post => post.title && post.body)
     }
   },
 }
