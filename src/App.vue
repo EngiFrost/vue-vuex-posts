@@ -11,9 +11,9 @@
 // TODO: convert to Composition API
 export default {
   name: 'App',
-  data() {
-    return {
-      posts: []
+  computed: {
+    getAllPosts() {
+      return this.$store.getters.getAllPosts
     }
   },
   async mounted() {
