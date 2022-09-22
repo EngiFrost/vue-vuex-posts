@@ -15,16 +15,10 @@ import { mapGetters, mapActions } from 'vuex'
 import PostForm from './components/PostForm.vue'
 export default {
   name: 'App',
-  // computed: {
-  //   allPosts() {
-  //     return this.$store.getters.allPosts
-  //   }
-  // },
   components: { PostForm },
   computed: mapGetters(['validPosts', 'postsCount']),
   methods: mapActions(['fetchPosts']),
   async mounted() {
-    // this.$store.dispatch('fetchPosts')
     this.fetchPosts(5)
   }
 }
